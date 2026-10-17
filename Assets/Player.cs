@@ -30,11 +30,12 @@ public class Player : MonoBehaviour
         {
             Vector3 move3d = new Vector3(move.x, 0, move.y);
 
-            rb.AddForce(move3d * speed);
+            rb.MovePosition(rb.position+ move3d * speed * Time.deltaTime);
         }
     }
     public void Pause()
     {
+        move = Vector3.zero;
         GameManager.instance.stateMnager.OnPause();
     }
     
