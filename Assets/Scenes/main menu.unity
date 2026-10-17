@@ -1811,8 +1811,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   levelManager: {fileID: 816956987}
-  stateMnager: {fileID: 0}
-  uiManager: {fileID: 0}
+  stateMnager: {fileID: 1435975486}
+  uiManager: {fileID: 1850622565}
 --- !u!4 &1619783956
 Transform:
   m_ObjectHideFlags: 0
