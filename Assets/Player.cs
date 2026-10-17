@@ -16,15 +16,26 @@ public class Player : MonoBehaviour
     }
     public void Move(InputAction.CallbackContext context)
     {
-        move = context.ReadValue<Vector2>();
-        Debug.Log("getting movement");
+        if(GameManager.instance.stateMnager.currentState == GameStateMnager.GameState.GamePlay)
+        {
+            move = context.ReadValue<Vector2>();
+            Debug.Log("getting movement");
+        }
+        
     }
     // Update is called once per frame
     void Update()
     {
-        Vector3 move3d = new Vector3(move.x, 0, move.y);
-        
-        rb.AddForce(move3d * speed);
+        if (GameManager.instance.stateMnager.currentState == GameStateMnager.GameState.GamePlay)
+        {
+            Vector3 move3d = new Vector3(move.x, 0, move.y);
+
+            rb.AddForce(move3d * speed);
+        }
+    }
+    public void Pause()
+    {
+        GameManager.instance.stateMnager.OnPause();
     }
     
 }

@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameStateMnager : MonoBehaviour
@@ -19,7 +20,14 @@ public class GameStateMnager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        if (currentState == GameState.MainMenu)
+        {
+            OnStateChange(currentState);
+        }
+        else
+        {
+            SetState(GameState.MainMenu);
+        }
     }
 
     public void SetState(GameState state)
@@ -37,8 +45,8 @@ public class GameStateMnager : MonoBehaviour
         switch (newState)
         {
             case GameState.MainMenu:
-
-                
+                GameManager.instance.levelManager.LoadLevel("main menu");
+                GameManager.instance.uiManager.HideAllUI(); 
 
 
 
@@ -46,8 +54,8 @@ public class GameStateMnager : MonoBehaviour
 
 
             case GameState.GamePlay:
+                GameManager.instance.uiManager.returnToGame();
 
-                
 
 
 
@@ -56,9 +64,9 @@ public class GameStateMnager : MonoBehaviour
 
 
             case GameState.Paused:
-
-
                 
+                GameManager.instance.uiManager.ShowPauseScreen();
+
 
 
                 break;
@@ -83,6 +91,7 @@ public class GameStateMnager : MonoBehaviour
         }
         else if (currentState == GameState.Paused)
         {
+            
             SetState(GameState.GamePlay);
         }
         
@@ -95,5 +104,6 @@ public class GameStateMnager : MonoBehaviour
     public void StartGame()
     {
         SetState(GameState.GamePlay);
+        GameManager.instance.levelManager.LoadLevel("Gameplay");
     }
 }

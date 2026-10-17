@@ -22,4 +22,6 @@ public class GameManager : MonoBehaviour
         }
     }
     public LevelManager levelManager;
+    public GameStateMnager stateMnager;
+    public UIManager uiManager;
 }
