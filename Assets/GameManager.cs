@@ -24,4 +24,9 @@ public class GameManager : MonoBehaviour
     public LevelManager levelManager;
     public GameStateMnager stateMnager;
     public UIManager uiManager;
+    public void QuitGame()
+    {
+        Debug.Log("quit game");
+        Application.Quit();
+    }
 }

@@ -20,6 +20,6 @@ public class Levelloadobject : MonoBehaviour
     }
     public void QuitGame()
     {
-        GameManager.instance.levelManager.QuitGame();
+        GameManager.instance.QuitGame();
     }
 }

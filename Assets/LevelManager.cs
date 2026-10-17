@@ -12,11 +12,7 @@ public class LevelManager : MonoBehaviour
         Debug.Log("loaded " + level);
         SceneManager.LoadScene(level);
     }
-    public void QuitGame()
-    {
-        Debug.Log("quit game");
-        Application.Quit();
-    }
+    
     public void LoadUiScene()
     {
         Debug.Log("loaded UI");
