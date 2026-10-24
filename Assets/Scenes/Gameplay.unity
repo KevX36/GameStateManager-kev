@@ -433,6 +433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   pauseScreen: {fileID: 1639990316}
   HUD: {fileID: 737953078}
+  hudText: {fileID: 1328845637}
 --- !u!4 &279211763
 Transform:
   m_ObjectHideFlags: 0
@@ -920,6 +921,70 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 1c00c4ef-1059-43b7-b480-cdb20fe61dec
     m_ActionName: 'Player/pause[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 635619018}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: heal
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 30841344-ccdb-482d-a113-00b9427f5f6d
+    m_ActionName: 'Player/Heal[/Keyboard/2]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 635619018}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: takeDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a96f800b-6f33-4cd2-b760-348ed54215a8
+    m_ActionName: 'Player/take damage[/Keyboard/1]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 635619018}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: RegenMana
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e161e565-68b8-4ebd-9ab1-e5ad5392dc0a
+    m_ActionName: 'Player/recover mana[/Keyboard/4]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 635619018}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: CastSpell
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f42310da-5038-45a4-b138-b4cb0650801f
+    m_ActionName: 'Player/cast spell[/Keyboard/2]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: 
