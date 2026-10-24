@@ -2223,6 +2223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   pauseScreen: {fileID: 1306099419}
   HUD: {fileID: 1205811295}
+  hudText: {fileID: 401214974}
 --- !u!1 &1852627078
 GameObject:
   m_ObjectHideFlags: 0

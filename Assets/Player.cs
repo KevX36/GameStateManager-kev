@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        
+        GameManager.instance.uiManager.UpdateUI(HP, MP);
     }
     public void Move(InputAction.CallbackContext context)
     {
@@ -38,5 +38,44 @@ public class Player : MonoBehaviour
         move = Vector3.zero;
         GameManager.instance.stateMnager.OnPause();
     }
-    
+    public void updateUI()
+    {
+        GameManager.instance.uiManager.UpdateUI(HP, MP);
+    }
+    public void heal(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            HP += 10;
+            updateUI();
+        }
+
+    }
+    public void takeDamage(InputAction.CallbackContext context)
+    { 
+        if (context.performed)
+        {
+            HP -= 10;
+            updateUI();
+        }
+
+    }
+    public void RegenMana(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            MP += 5;
+            updateUI();
+        }
+
+    }
+    public void CastSpell(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            MP -= 5;
+            updateUI();
+        }
+
+    }
 }

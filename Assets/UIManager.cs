@@ -1,9 +1,11 @@
+using TMPro;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
     public GameObject pauseScreen;
     public GameObject HUD;
+    public TextMeshProUGUI hudText; 
     public void ShowPauseScreen()
     {
         HideAllUI();
@@ -11,7 +13,10 @@ public class UIManager : MonoBehaviour
         pauseScreen.SetActive(true);
          
     }
-    
+    public void UpdateUI(int HP, int MP)
+    {
+        hudText.text = $"HP: {HP}\nMP: {MP}";
+    }
     public void returnToGame()
     {
         HideAllUI();
